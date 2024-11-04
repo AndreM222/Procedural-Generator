@@ -28,12 +28,12 @@ This project contains a procedural generator I developed for the use of my resea
 
 - [Props/Actor Spawning](docs/setup.md#props-and-actors)
     - Spawn props, actors, etc. at any point desires
-    - [Filter](docs/setup.md/filter)
+    - [Filter](docs/setup.md#filter)
         - You can use filters to specify either which specific rooms
             to spawn in or which ones not to spawn in.
     - Can also specify total amount to spawn.
 
-- [Room Setup](docs/setup.md/rooms)
+- [Room Setup](docs/setup.md#rooms)
     - You can set the possible walls to use to close the room.
     - Choose spots on where to spawn actors/props.
     - Choose where can a new room be places in any dimension and amount.
