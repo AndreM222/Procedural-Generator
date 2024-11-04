@@ -31,14 +31,6 @@ public:
 	 */
 	void RebootGeneratedRooms();
 
-    /**
-     * Generator
-     *
-     * @note
-     *	Must use this to get the actions available of the generator.
-     */
-	TObjectPtr<ARoom_Generator> Generator = this;
-	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

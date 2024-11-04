@@ -321,13 +321,10 @@ void ARoom_Generator::RebootGeneratedRooms()
     DeleteGeneratedRooms();
 	
 	// Setup New Room Generator
-	TObjectPtr<ARoom_Generator> newGenerator = GetWorld()->SpawnActor<ARoom_Generator>( // Spawn actor
+	GetWorld()->SpawnActor<ARoom_Generator>( // Spawn actor
 		this->GetClass(),
 		this->GetActorLocation(),
 		this->GetActorRotation(),
 		SpawnParams
 	);
-
-	// Set new generator
-	Generator = newGenerator;
 }
