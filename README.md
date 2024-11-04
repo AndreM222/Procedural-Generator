@@ -9,6 +9,7 @@
 ## Contents
 
 This project contains a procedural generator I developed for the use of my research on AI in unreal engine.
+For more information on how to use it refer to the [Documentation](/docs/setup.md).
 
 ## Dependencies
 
