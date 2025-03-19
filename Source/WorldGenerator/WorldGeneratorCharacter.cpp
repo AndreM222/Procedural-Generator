@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "AISandboxCharacter.h"
+#include "WorldGeneratorCharacter.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -16,7 +16,7 @@ DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 //////////////////////////////////////////////////////////////////////////
 // AAISandboxCharacter
 
-AAISandboxCharacter::AAISandboxCharacter()
+AWorldGeneratorCharacter::AWorldGeneratorCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -54,7 +54,7 @@ AAISandboxCharacter::AAISandboxCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
-void AAISandboxCharacter::BeginPlay()
+void AWorldGeneratorCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
@@ -63,7 +63,7 @@ void AAISandboxCharacter::BeginPlay()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void AAISandboxCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AWorldGeneratorCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
@@ -82,10 +82,10 @@ void AAISandboxCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		// Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAISandboxCharacter::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AWorldGeneratorCharacter::Move);
 
 		// Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AAISandboxCharacter::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AWorldGeneratorCharacter::Look);
 	}
 	else
 	{
@@ -93,7 +93,7 @@ void AAISandboxCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	}
 }
 
-void AAISandboxCharacter::Move(const FInputActionValue& Value)
+void AWorldGeneratorCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -116,7 +116,7 @@ void AAISandboxCharacter::Move(const FInputActionValue& Value)
 	}
 }
 
-void AAISandboxCharacter::Look(const FInputActionValue& Value)
+void AWorldGeneratorCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();

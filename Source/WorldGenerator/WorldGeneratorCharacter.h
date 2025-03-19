@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
-#include "AISandboxCharacter.generated.h"
+#include "WorldGeneratorCharacter.generated.h"
 
 class USpringArmComponent;
 class UCameraComponent;
@@ -16,7 +16,7 @@ struct FInputActionValue;
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 UCLASS(config = Game)
-class AAISandboxCharacter : public ACharacter
+class AWorldGeneratorCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -45,7 +45,7 @@ class AAISandboxCharacter : public ACharacter
 	UInputAction *LookAction;
 
 public:
-	AAISandboxCharacter();
+	AWorldGeneratorCharacter();
 
 protected:
 	/** Called for movement input */

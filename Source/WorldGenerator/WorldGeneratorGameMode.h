@@ -4,15 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "AISandboxGameMode.generated.h"
+#include "WorldGeneratorGameMode.generated.h"
 
 UCLASS(minimalapi)
-class AAISandboxGameMode : public AGameModeBase
+class AWorldGeneratorGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
-	AAISandboxGameMode();
+	AWorldGeneratorGameMode();
 };
 
 
