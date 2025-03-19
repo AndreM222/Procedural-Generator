@@ -8,7 +8,7 @@
 #include "Master_Room.generated.h"
 
 UCLASS()
-class AISANDBOX_API AMaster_Room : public AActor
+class WORLDGENERATOR_API AMaster_Room : public AActor
 {
 	GENERATED_BODY()
 

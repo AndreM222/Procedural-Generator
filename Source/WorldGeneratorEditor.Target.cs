@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class AISandboxTarget : TargetRules
+public class WorldGeneratorEditorTarget : TargetRules
 {
-	public AISandboxTarget(TargetInfo Target) : base(Target)
+	public WorldGeneratorEditorTarget( TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Game;
+		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_4;
-		ExtraModuleNames.Add("AISandbox");
+		ExtraModuleNames.Add("WorldGenerator");
 	}
 }

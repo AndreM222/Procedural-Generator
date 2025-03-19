@@ -9,7 +9,7 @@
 #include "Room_Generator.generated.h"
 
 UCLASS()
-class AISANDBOX_API ARoom_Generator : public AActor
+class WORLDGENERATOR_API ARoom_Generator : public AActor
 {
 	GENERATED_BODY()
 	
@@ -140,7 +140,7 @@ protected:
 	// -----------------------------------------------------------------------
 
 	// List of spawned closers of exits
-	TArray<TObjectPtr<AActor>> spawnedClosers;
+TArray<TObjectPtr<AActor>> spawnedClosers;
 	// List of spawned rooms
 	TArray<TObjectPtr<AMaster_Room>> spawnedRooms;
 	// List of spawned CLosers

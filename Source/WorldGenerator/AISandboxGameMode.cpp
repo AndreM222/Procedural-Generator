@@ -1,7 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "AISandboxGameMode.h"
-#include "AISandboxCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 AAISandboxGameMode::AAISandboxGameMode()
